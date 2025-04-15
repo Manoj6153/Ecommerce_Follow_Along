@@ -26,7 +26,7 @@ function EditProduct() {
     const fetchProduct = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`https://ecommerce-follow-along-1-trh6.onrender.com/get-product/${id}`);
+        const response = await axios.get(`https://ecommerce-follow-along-1-trh6.onrender.com/product/get-product/${id}`);
         const product = response.data.product;
         
         setFormData({
