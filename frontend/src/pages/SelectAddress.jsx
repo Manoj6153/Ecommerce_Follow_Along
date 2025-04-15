@@ -13,7 +13,7 @@ const SelectAddress = () => {
   useEffect(() => {
     const fetchAddresses = async () => {
       try {
-        const { data } = await axios.get('http://localhost:3000/auth/get-address', {
+        const { data } = await axios.get('https://ecommerce-follow-along-1-trh6.onrender.com/auth/get-address', {
           headers: { Authorization: localStorage.getItem('token') },
         });
         setAddresses(data.addresses);

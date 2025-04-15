@@ -27,7 +27,7 @@ export default function ProductCard({product}) {
             navigate('/login')
             return;
         }
-        axios.patch('http://localhost:3000/product/cart',{id:id,quantity:1},{headers:{"Authorization":localStorage.getItem("token")}}).then((res)=>{
+        axios.patch('https://ecommerce-follow-along-1-trh6.onrender.com/product/cart',{id:id,quantity:1},{headers:{"Authorization":localStorage.getItem("token")}}).then((res)=>{
             console.log(res);
             alert('Product added to cart')
         }).catch((err)=>{
@@ -42,7 +42,7 @@ export default function ProductCard({product}) {
             <div className='flex flex-col text-black items-center'>
                 
             <img 
-    src={`http://localhost:3000/${product.images[imgIndex].replace(/\\/g, "/")}`} 
+    src={`https://ecommerce-follow-along-1-trh6.onrender.com/${product.images[imgIndex].replace(/\\/g, "/")}`} 
     alt={product.name} 
     className="h-48 w-96 object-cover rounded-lg mb-2"
 />

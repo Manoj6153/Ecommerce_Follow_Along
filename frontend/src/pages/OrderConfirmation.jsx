@@ -14,7 +14,7 @@ const OrderConfirmation = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/product/getcart", {
+      .get("https://ecommerce-follow-along-1-trh6.onrender.com/product/getcart", {
         headers: { Authorization: localStorage.getItem("token") },
       })
       .then((res) => {
@@ -85,7 +85,7 @@ const OrderConfirmation = () => {
                   try {
                     const order = await actions.order.capture();
                     const response = await axios.post(
-                      "http://localhost:3000/order/verify-payment",
+                      "https://ecommerce-follow-along-1-trh6.onrender.com/order/verify-payment",
                       { orderId: order.id },
                       {
                         headers: {

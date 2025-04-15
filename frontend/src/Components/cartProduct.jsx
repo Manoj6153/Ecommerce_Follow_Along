@@ -26,13 +26,13 @@ export default function CartProduct({ productId, productImages, productName, qua
             setCurrentIndex((prev) => {
                 return (prev + 1) % productImages.length;
             });
-        }, 3000); // Adjusted timing for a smoother transition
+        }, 3000);
 
         return () => clearInterval(interval);
     }, [currentIndex, productImages.length]);
 
     const updateQuantityVal = (quantity) => {
-        axios.patch('http://localhost:3000/product/cart', {
+        axios.patch('https://ecommerce-follow-along-1-trh6.onrender.com/product/cart', {
             id: productId,
             quantity: quantity,
         }, { headers: { "Authorization": localStorage.getItem("token") } })
@@ -57,7 +57,7 @@ export default function CartProduct({ productId, productImages, productName, qua
                 {/* Image carousel */}
                 <div className="w-24 h-24 md:w-64 md:h-40 bg-gray-200 rounded-lg overflow-hidden">
                     <img
-                        src={`http://localhost:3000/${productImages[currentIndex].replace(/\\/g, "/")}`}
+                        src={`https://ecommerce-follow-along-1-trh6.onrender.com/${productImages[currentIndex].replace(/\\/g, "/")}`}
                         alt={productName}
                         className="object-cover w-full h-full"
                     />

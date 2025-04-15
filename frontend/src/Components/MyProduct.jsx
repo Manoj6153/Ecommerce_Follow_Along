@@ -31,7 +31,7 @@ function MyProduct({ _id, name, images, description, price, onDelete }) {
             setIsDeleting(true);
             
             const response = await axios.delete(
-                `http://localhost:3000/product/delete-product/${_id}`
+                `https://ecommerce-follow-along-1-trh6.onrender.com/product/delete-product/${_id}`
             );
             
             if (response.status === 200) {
@@ -68,7 +68,7 @@ function MyProduct({ _id, name, images, description, price, onDelete }) {
                 <div className="w-full">
                     {currentImage ? (
                         <img
-                            src={`http://localhost:3000${currentImage}`}
+                            src={`https://ecommerce-follow-along-1-trh6.onrender.com${currentImage}`}
                             alt={name}
                             className="w-full h-56 object-cover rounded-lg mb-2"
                         />

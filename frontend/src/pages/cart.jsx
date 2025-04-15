@@ -9,7 +9,7 @@ const Cart = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/product/getcart`, { headers: { "Authorization": localStorage.getItem("token") } })
+        axios.get(`https://ecommerce-follow-along-1-trh6.onrender.com/product/getcart`, { headers: { "Authorization": localStorage.getItem("token") } })
             .then((res) => {
                 if (res.status !== 200) {
                     console.log("Error in cart page");

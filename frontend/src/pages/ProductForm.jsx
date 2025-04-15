@@ -22,7 +22,7 @@ export const Productform = () => {
   useEffect(() => {
     if (isEdit) {
       axios
-        .get(`http://localhost:3000/product/get-product/${id}`)
+        .get(`hhttps://ecommerce-follow-along-1-trh6.onrender.com/product/get-product/${id}`)
         .then((res) => {
           const p = res.data.product;
           setName(p.name);
@@ -33,7 +33,7 @@ export const Productform = () => {
           setStock(p.stock);
           setEmail(p.email);
           if (p.images?.length) {
-            setPreview(p.images.map(imgPath => `http://localhost:3000/${imgPath}`));
+            setPreview(p.images.map(imgPath => `https://ecommerce-follow-along-1-trh6.onrender.com/${imgPath}`));
           }
         })
         .catch((err) => {
@@ -64,7 +64,7 @@ export const Productform = () => {
 
     try {
       if (isEdit) {
-        const res = await axios.put(`http://localhost:3000/product/edit-product/${id}`, formData, {
+        const res = await axios.put(`https://ecommerce-follow-along-1-trh6.onrender.com/product/edit-product/${id}`, formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
         if (res.status === 200) {
@@ -72,7 +72,7 @@ export const Productform = () => {
           navigate("/my-products");
         }
       } else {
-        const res = await axios.post(`http://localhost:3000/product/post-product`, formData, {
+        const res = await axios.post(`https://ecommerce-follow-along-1-trh6.onrender.com/product/post-product`, formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
         if (res.status === 200) {

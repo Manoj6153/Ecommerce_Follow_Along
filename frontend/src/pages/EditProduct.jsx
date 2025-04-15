@@ -26,7 +26,7 @@ function EditProduct() {
     const fetchProduct = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:3000/product/get-product/${id}`);
+        const response = await axios.get(`https://ecommerce-follow-along-1-trh6.onrender.com/get-product/${id}`);
         const product = response.data.product;
         
         setFormData({
@@ -84,7 +84,7 @@ function EditProduct() {
       }
       
       const response = await axios.put(
-        `http://localhost:3000/product/edit-product/${id}`,
+        `https://ecommerce-follow-along-1-trh6.onrender.com/product/edit-product/${id}`,
         productFormData,
         {
           headers: {
@@ -95,7 +95,7 @@ function EditProduct() {
       
       if (response.status === 200) {
         alert("Product updated successfully!");
-        navigate('/my-products'); // Navigate to products list page
+        navigate('/my-products');
       }
     } catch (err) {
       console.error("Error updating product:", err);
@@ -208,7 +208,7 @@ function EditProduct() {
               {existingImages.map((img, index) => (
                 <div key={index} className="relative border rounded overflow-hidden h-32">
                   <img
-                    src={`http://localhost:3000${img}`}
+                    src={`https://ecommerce-follow-along-1-trh6.onrender.com${img}`}
                     alt={`Product ${index + 1}`}
                     className="w-full h-full object-cover"
                   />

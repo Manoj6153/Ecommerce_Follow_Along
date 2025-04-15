@@ -9,7 +9,7 @@ function Profile() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/auth/get-user", {
+      .get("https://ecommerce-follow-along-1-trh6.onrender.com/auth/get-user", {
         headers: { Authorization: localStorage.getItem("token") },
       })
       .then((response) => {
@@ -41,7 +41,7 @@ function Profile() {
         <div className="bg-blue-100 rounded-xl shadow-md p-6 flex items-center space-x-6">
           <img
             className="w-24 h-24 rounded-full object-cover border"
-            src={`http://localhost:3000${user.avatar?.url.replace(/\\/g, "/")}`}
+            src={`https://ecommerce-follow-along-1-trh6.onrender.com${user.avatar?.url.replace(/\\/g, "/")}`}
             alt="User Avatar"
           />
           <div>

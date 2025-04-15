@@ -10,7 +10,7 @@ const OrdersPage = () => {
     try {
       setLoading(true);
       setError('');
-      const response = await axios.get('http://localhost:3000/order/myorder', {
+      const response = await axios.get('https://ecommerce-follow-along-1-trh6.onrender.com/order/myorder', {
         headers: {
           Authorization: localStorage.getItem('token') || '',
         },
@@ -26,7 +26,7 @@ const OrdersPage = () => {
   const cancelOrder = async (orderId) => {
     try {
       const response = await axios.patch(
-        `http://localhost:3000/orders/cancel-order/${orderId}`,
+        `https://ecommerce-follow-along-1-trh6.onrender.com/orders/cancel-order/${orderId}`,
         {},
         {
           headers: {

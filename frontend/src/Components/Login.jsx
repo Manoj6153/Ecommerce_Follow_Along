@@ -21,7 +21,7 @@ export default function Login() {
     }
 
     try {
-      const response = await axios.post("http://localhost:3000/auth/login", {
+      const response = await axios.post("https://ecommerce-follow-along-1-trh6.onrender.com/auth/login", {
         email,
         password,
       });

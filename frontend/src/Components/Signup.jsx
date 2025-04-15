@@ -21,7 +21,7 @@ export default function Signup() {
 
     try {
       const res = await axios.post(
-        "http://localhost:3000/auth/create-user",
+        "https://ecommerce-follow-along-1-trh6.onrender.com/auth/create-user",
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

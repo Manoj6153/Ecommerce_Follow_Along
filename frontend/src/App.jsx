@@ -1,18 +1,17 @@
-
 import {Routes, Route,Link} from 'react-router-dom'
 import Login from './Components/Login'
 import Signup from './Components/Signup'
 import Home from './pages/Homepage'
-import Cart from './Pages/CArt'
+import Cart from './pages/cart'
 import MyProducts from './pages/MyProducts'
-import AddressForm from './Pages/AddressForm'
-import { Productform } from './Pages/ProductForm'
+import AddressForm from './pages/AddressForm'
+import { Productform } from './pages/ProductForm'
 import { ProductCardForSeller } from './Components/ProductCardForSeller'
-import OrderConfirmation from './Pages/OrderConfirmation'
-import SelectAddress from './Pages/SelectAddress'
+import OrderConfirmation from './pages/OrderConfirmation'
+import SelectAddress from './pages/SelectAddress'
 import './App.css'
 import Profile from './pages/Profile'
-import PrivateRouter from './Router/PrivateRouter'
+import PrivateRouter from './router/PrivateRouter'
 import EditProduct from'./pages/EditProduct'
 
 function App() {
@@ -37,8 +36,6 @@ function App() {
       <Route path='confirm-order' element={<OrderConfirmation />}></Route>
       <Route path="/edit-product/:id" element={<EditProduct />} />
     </Routes>
-    {/* <Link to='/login'><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</button></Link>
-    <Link to='/sign-up'><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sign up</button></Link> */}
      
 
     </>

@@ -11,7 +11,7 @@ export default function MyProducts() {
 
     useEffect(() => {
         console.log(localStorage.getItem("token"))
-        if (localStorage.getItem("token")){axios.get(`http://localhost:3000/product/get-my-products`,{headers:{"Authorization":localStorage.getItem("token")}})
+        if (localStorage.getItem("token")){axios.get(`https://ecommerce-follow-along-1-trh6.onrender.com/product/get-my-products`,{headers:{"Authorization":localStorage.getItem("token")}})
             .then((res) => {
                 if (res.status !== 200) {
                     throw new Error(`HTTP error! status: ${res.status}`);
